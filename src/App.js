@@ -114,14 +114,14 @@ function App() {
       return (
         <div
           key={idx}
-          className="relative p-4 bg-card rounded-lg shadow-lg transition-transform transform hover:scale-105 h-60 flex items-center justify-center mb-6"
+          className="relative p-4 bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 h-60 flex items-center justify-center mb-6"
         >
           {widget ? (
             <div className="w-full h-full">
               <h3 className="absolute top-0 left-5 m-2 text-xl font-bold">
                 {widget.title}
               </h3>
-              <div className="border border-dashed border-border rounded-lg p-6 h-40 w-full text-center text-base mt-8 whitespace-pre-wrap">
+              <div className="border border-dashed border-border rounded-lg p-6 h-40 w-full text-center text-base mt-8 whitespace-pre-wrap bg-white">
                 <button
                   onClick={() => removeWidget(categoryName, widget.id)}
                   className="absolute top-2 right-2 w-6 h-6 flex items-center justify-center rounded-full text-gray-300 bg-gray-700 hover:bg-gray-600"
@@ -138,7 +138,7 @@ function App() {
           ) : (
             <button
               onClick={() => handleAddWidgetClick(categoryName, idx)}
-              className="text-primary border border-primary hover:bg-primary/10 px-4 py-2 rounded-lg"
+              className="bg-white text-secondary-foreground hover:bg-gray-200 px-4 py-2 rounded-lg border border-secondary transition-colors"
             >
               + Add Widget
             </button>
@@ -289,17 +289,17 @@ function App() {
         <div className="flex items-center">
           <button
             onClick={() => handleAddWidgetClick(activeTab)} 
-            className="bg-[white] text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-lg border border-secondary"
+            className="bg-white text-secondary-foreground hover:bg-gray-200 px-4 py-2 rounded-lg border border-secondary transition-colors"
           >
             Add Widget +
           </button>
           <button
-            className="bg-[white] text-secondary-foreground hover:bg-secondary/80 px-2 py-2 rounded-lg border border-secondary ms-3"
+            className="bg-white text-secondary-foreground hover:bg-gray-200 px-4 py-2 rounded-lg border border-secondary transition-colors ms-3"
           >
             <FaSync />
           </button>
           <button
-            className="bg-[white] text-secondary-foreground hover:bg-secondary/80 px-2 py-2 rounded-lg border border-secondary ms-3"
+            className="bg-white text-secondary-foreground hover:bg-gray-200 px-4 py-2 rounded-lg border border-secondary transition-colors ms-3"
           >
             <FaEllipsisV  />
           </button>
@@ -372,12 +372,14 @@ function App() {
                   placeholder="New Category Name"
                   className="w-full border border-gray-300 rounded-lg p-2 mb-4"
                 />
+                <div className="flex justify-end">
                 <button
                   onClick={addCategory}
-                  className="w-full bg-primary text-white rounded-lg p-2"
+                  className="border-2 border-darkblue2 text-darkblue2 bg-white px-4 py-1 rounded-lg hover:bg-darkblue2 hover:text-white transition duration-200"
                 >
                   Add Category
                 </button>
+                </div>
               </div>
             )}
             {!isAddingCategory && (
