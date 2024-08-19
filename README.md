@@ -1,5 +1,5 @@
 
-# Dashboard Project
+# Dashboard Management System
 
 This is a React-based dashboard project where users can manage categories and widgets dynamically. The application supports adding and removing categories, adding and removing widgets within each category, searching for widgets, and confirming widget removal actions.
 
